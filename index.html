@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slider</title>
+</head>
+<body>
+<img name="slider" width="500" height="250">
+<script language="JavaScript" type="text/javascript" >
+
+
+window.addEventListener('load', function  () {
+
+    console.log('el contenido ha cambiado');
+    var Imgen = [];
+    var tiempo = 2000;
+    
+    Imgen [0] = 'Imagenes/1.jpg';
+    Imgen [1] = 'Imagenes/2.jpg';
+    Imgen [2] = 'Imagenes/3.jpg';
+    Imgen [3] = 'Imagenes/4.jpg';
+  var indiceImagenes =0;
+   
+function cambiarImagenes(){
+
+document.slider.src = Imgen[indiceImagenes];
+if (indiceImagenes < 2 ){
+indiceImagenes ++;
+} else{
+indiceImagenes = 0;
+
+}
+
+} 
+setInterval(cambiarImagenes,tiempo);
+
+
+
+} );
+</script>
+
+</body>
+</html>
